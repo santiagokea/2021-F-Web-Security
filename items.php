@@ -12,11 +12,13 @@ require_once("globals.php");
 </head>
 <body>
   
-  <form>
-    <?php _set_csrf() ?>
-    <input type="text" value="Shoes">
+  <form action="api-delete-item.php" method="POST">
+    <input name="csrf" type="hidden" value="<?= _set_csrf() ?>">
+    <input name="item_id" type="hidden" value="1">
+    <input name="item_name" type="text" value="Shoes">
     <button>Delete item</button>
   </form>
+
 
 </body>
 </html>
